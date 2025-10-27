@@ -40,9 +40,8 @@ PDF Documents → Load → Split → Embed → Store in Vector DB
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/lakshmana/rag_ingestion_pipeline.git
 cd rag_ingestion_pipeline
-
 ```
 
 2. Install Python 3.11 (if not already installed):
@@ -180,12 +179,16 @@ source venv/bin/activate
 deactivate
 ```
 
-### Running Tests
+### Running the Main Script
+
+The `main.py` script provides a simple entry point:
 
 ```bash
 # Run the main script
 python main.py
 ```
+
+Note: The complete RAG pipeline is implemented in the Jupyter notebook (`notebook/pdf_loader.ipynb`).
 
 ## Troubleshooting
 
