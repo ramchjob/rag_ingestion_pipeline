@@ -13,6 +13,7 @@ A Retrieval-Augmented Generation (RAG) system for ingesting PDF documents and cr
 - 🔍 **Semantic Embeddings**: Generate embeddings using Sentence Transformers models
 - 💾 **Vector Storage**: Persistent vector database using ChromaDB
 - 🔎 **Metadata Preservation**: Maintains document source, page numbers, and content metadata
+- 🤖 **RAG Query**: Uses Groq's Llama 3.1 8B Instant model for fast and efficient querying
 
 ## Architecture
 
@@ -62,6 +63,13 @@ pip install -r requirements.txt
 ```bash
 python -m ipykernel install --user --name=rag_ingestion_pipeline --display-name "Python (rag_ingestion_pipeline)"
 ```
+
+5. Set up Groq API key (for RAG query functionality):
+```bash
+export GROQ_API_KEY="your-groq-api-key-here"
+```
+
+You can get your Groq API key from [https://console.groq.com/](https://console.groq.com/)
 
 ## Usage
 
@@ -148,6 +156,16 @@ Adjust chunk size and overlap in the `split_documents` function:
 ```python
 chunks = split_documents(documents, chunk_size=1000, chunk_overlap=200)
 ```
+
+### LLM Model (Groq)
+
+The RAG system uses Groq's Llama 3.1 8B Instant model for query responses:
+- **Model**: `llama-3.1-8b-instant`
+- **Provider**: Groq
+- **Features**: Fast inference, low latency
+- **API Key**: Set the `GROQ_API_KEY` environment variable
+
+The model can be changed in the notebook by modifying the `ChatGroq` initialization.
 
 ## Vector Store
 
