@@ -4,7 +4,7 @@ A Retrieval-Augmented Generation (RAG) system for ingesting PDF documents and cr
 
 ## Overview
 
-`ytrag` is a RAG pipeline that processes PDF documents, generates embeddings, and stores them in a vector database for efficient similarity search and retrieval. The system uses LangChain for document processing, Sentence Transformers for embeddings, and ChromaDB for vector storage.
+`rag_ingestion_pipeline` is a RAG pipeline that processes PDF documents, generates embeddings, and stores them in a vector database for efficient similarity search and retrieval. The system uses LangChain for document processing, Sentence Transformers for embeddings, and ChromaDB for vector storage.
 
 ## Features
 
@@ -41,7 +41,8 @@ PDF Documents → Load → Split → Embed → Store in Vector DB
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd ytrag
+cd rag_ingestion_pipeline
+
 ```
 
 2. Install Python 3.11 (if not already installed):
@@ -60,7 +61,7 @@ pip install -r requirements.txt
 
 4. Set up Jupyter kernel (for notebook usage):
 ```bash
-python -m ipykernel install --user --name=ytrag --display-name "Python (ytrag)"
+python -m ipykernel install --user --name=rag_ingestion_pipeline --display-name "Python (rag_ingestion_pipeline)"
 ```
 
 ## Usage
@@ -77,7 +78,7 @@ cp your_documents.pdf data/rag_data/
 jupyter notebook notebook/pdf_loader.ipynb
 ```
 
-3. Select the kernel: **Python (ytrag)**
+3. Select the kernel: **Python (rag_ingestion_pipeline)**
 
 4. Run all cells to:
    - Load PDF documents
@@ -97,7 +98,7 @@ The pipeline consists of several steps:
 ## Project Structure
 
 ```
-ytrag/
+rag_ingestion_pipeline/
 ├── notebook/
 │   ├── pdf_loader.ipynb      # Main RAG pipeline notebook
 │   └── document.ipynb         # Document examples
@@ -191,7 +192,7 @@ python main.py
 ### Common Issues
 
 1. **ModuleNotFoundError**: Ensure you're using Python 3.10+ and have installed all dependencies
-2. **Kernel Issues**: Select "Python (ytrag)" kernel in Jupyter
+2. **Kernel Issues**: Select "Python (rag_ingestion_pipeline)" kernel in Jupyter
 3. **Import Errors**: Activate the virtual environment before running notebooks
 
 ### Python Version Issues
