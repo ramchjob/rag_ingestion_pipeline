@@ -1,4 +1,4 @@
-# ytrag - YouTube RAG Pipeline
+# RAG - Data Ingestion Pipeline
 
 A Retrieval-Augmented Generation (RAG) system for ingesting PDF documents and creating a searchable vector database.
 
